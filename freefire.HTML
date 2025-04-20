@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🎯 ফ্রি ফায়ার গিফট কোড এখনই পেয়ে যান!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #loader {
+      position: fixed;
+      z-index: 9999;
+      width: 100%;
+      height: 100%;
+      background: #000 url('https://i.ibb.co/mB7WSHt/fire-bg.gif') center center no-repeat;
+      background-size: cover;
+    }
+
+    #content {
+      display: none;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 420px;
+      margin: 50px auto;
+      padding: 40px 30px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 25px rgba(255, 128, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #FFD700;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #ff0;
+    }
+
+    .code {
+      background: #ff5722;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: inline-block;
+      animation: glow 2s infinite;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 10px #ff9800; }
+      50% { box-shadow: 0 0 25px #ffa726; }
+    }
+
+    .rewards span {
+      display: inline-block;
+      margin: 6px;
+      padding: 6px 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      box-shadow: 0 0 8px #ffab40;
+    }
+
+    .btn {
+      background: linear-gradient(45deg, #ff9800, #ff5722);
+      padding: 14px 28px;
+      color: #fff;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: 0.3s;
+      box-shadow: 0 0 20px #ffa726;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #ffd54f;
+    }
+
+    .timer, .live-users {
+      margin-top: 15px;
+      color: #ffff99;
+      font-size: 1rem;
+    }
+
+    .winner-ticker {
+      margin-top: 25px;
+      height: 80px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .winner-ticker ul {
+      position: absolute;
+      width: 100%;
+      animation: scrollUp 8s linear infinite;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .winner-ticker li {
+      padding: 5px 0;
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    @keyframes scrollUp {
+      0% { top: 0; }
+      100% { top: -100%; }
+    }
+
+    #claimedMessage {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #ff9800;
+      font-weight: 600;
+      animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .claimSuccess {
+      color: #00c853;
+      font-size: 1.4rem;
+      animation: successAnimation 2s forwards;
+    }
+
+    @keyframes successAnimation {
+      0% { transform: scale(1); opacity: 0; }
+      100% { transform: scale(1.2); opacity: 1; }
+    }
+
+    @media(max-width: 480px) {
+      h1 { font-size: 1.6rem; }
+      .code { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="loader"></div>
+  <div id="particles-js"></div>
+  <div id="content">
+    <div class="card">
+      <h1>🚀 ফ্রি ফায়ার গিফট কোড এখনই পেয়ে যান!</h1>
+      <div class="code" id="giftCode" onclick="copyCode()">🎯 কোড: FFBBCVQZ4MWA</div>
+      <div class="rewards">
+        <span>🎁 Diamond</span>
+        <span>🔥 Gun Skin</span>
+        <span>💃 Emotes</span>
+        <span>🧊 Magic Cube</span>
+        <span>🎫 Elite Pass</span>
+      </div>
+      <a class="btn" href="https://free-fire-garena-offcial.blogspot.com/?m=1" target="_blank">👉 Claim Now</a>
+      <div class="timer">⚡ অফার শেষ হতে বাকি: <span id="countdown">02:00</span></div>
+      <div class="live-users">🟢 এখন লাইভ: <span id="users">347</span> জন ইউজার</div>
+
+      <div id="claimedMessage" class="claimSuccess">✅ Claimed Successfully!</div>
+
+      <div class="winner-ticker">
+        <ul>
+          <li>✅ Shamim - 500 Diamond</li>
+          <li>✅ Rahim - Elite Pass</li>
+          <li>✅ Mehedi - Gun Skin</li>
+          <li>✅ Junaid - 1000 Diamond</li>
+          <li>✅ Priya - Magic Cube</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Countdown + Fake Live Users -->
+  <script>
+    let time = 120;
+    const countdown = document.getElementById("countdown");
+    const userCount = document.getElementById("users");
+    const timer = setInterval(() => {
+      let min = Math.floor(time / 60);
+      let sec = time % 60;
+      countdown.textContent = `${min}:${sec < 10 ? '0' : ''}${sec}`;
+      time--;
+      if (time < 0) clearInterval(timer);
+    }, 1000);
+
+    setInterval(() => {
+      let fakeUsers = 320 + Math.floor(Math.random() * 40);
+      userCount.textContent = fakeUsers;
+    }, 3000);
+
+    function copyCode() {
+      const code = document.getElementById("giftCode").textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        document.getElementById("claimedMessage").style.display = "block";
+        setTimeout(() => {
+          document.getElementById("claimedMessage").style.display = "none";
+        }, 3000);
+      });
+    }
+  </script>
+
+  <!-- Fire loader off after load -->
+  <script>
+    window.onload = () => {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }
+  </script>
+
+  <!-- Particles Background -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "color": { "value": "#ffcc00" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.7 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffa726",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      }
+    });
+  </script>
+</body>
+</html>
